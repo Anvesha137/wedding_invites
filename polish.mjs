@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+let s=readFileSync('src/experience.jsx','utf8');
+s=s.replace('downloadCalendar} from', 'downloadCalendar,ceremonyDate,ceremonyTime,initials} from');
+s=s.replace('18 February 2027 · 4:30 PM IST','{ceremonyDate()} · {ceremonyTime()} IST');
+s=s.replace('18 · 02 · 2027 &nbsp; / &nbsp;',"{ceremonyDate({day:'2-digit',month:'2-digit',year:'numeric'})} &nbsp; / &nbsp;");
+s=s.replace('18 FEBRUARY 2027 <span>',"{ceremonyDate().toUpperCase()} <span>");
+s=s.replace('18.02.2027 · {d.city}',"{ceremonyDate({day:'2-digit',month:'2-digit',year:'numeric'})} · {d.city}");
+s=s.replaceAll('A <i>&</i> M','{initials()}').replaceAll('<span>A & M</span>','<span>{initials()}</span>').replace('AARAV & MEERA &nbsp;',"{wedding.names.join(' & ').toUpperCase()} &nbsp;");
+s=s.replace("if(!opened)return;const elements=", "if(!opened)return;hero.current?.focus({preventScroll:true});const elements=");
+s=s.replace("setOpened(true);hero.current?.focus({preventScroll:true})", "setOpened(true)");
+writeFileSync('src/experience.jsx',s);

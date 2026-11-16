@@ -1,0 +1,23 @@
+/* Cohesive photographic scenes, with readable invitation typography. */
+.theme-preview.photographic-preview{isolation:isolate;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:0;padding:28px 20px;min-height:280px;background:var(--bg)}
+.theme-preview.photographic-preview .preview-scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s cubic-bezier(.2,.6,.2,1)}
+.theme-preview.photographic-preview:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(transparent 25%,color-mix(in srgb,var(--bg) 35%,transparent) 48%,color-mix(in srgb,var(--bg) 96%,transparent) 100%)}
+.theme-preview.photographic-preview .preview-ganesh{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:52px;height:60px;filter:drop-shadow(0 3px 8px #fff9)}
+.theme-preview.photographic-preview>span{position:relative;font-size:9px;letter-spacing:2px;padding:8px 14px;background:color-mix(in srgb,var(--bg) 85%,transparent);color:var(--ink);border-radius:30px;margin:0 0 10px}
+.theme-preview.photographic-preview strong{font:italic clamp(25px,2.3vw,36px)/1.2 Georgia,serif;color:var(--ink);position:relative;inset:auto;background:none;width:auto;padding:0;letter-spacing:-.5px;margin:0 0 10px}
+.theme-preview.photographic-preview small{font-size:11px;line-height:1.6;color:var(--ink);max-width:310px;text-wrap:balance}
+.template-card:hover .preview-scene{transform:scale(1.045)}
+.experience.immersive .scene-far{opacity:.52;inset:-5% -5% -20%}
+.experience.immersive .scene-colour{background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 75%,transparent),color-mix(in srgb,var(--bg) 65%,transparent),color-mix(in srgb,var(--bg) 75%,transparent))}
+.experience .photographic-opening .opening-landscape{opacity:1;object-position:center;transform:scale(1.02)}
+.experience .photographic-opening .opening-art{display:none}
+.experience .photographic-opening .opening-light{opacity:.25}
+.experience .photographic-opening .opening-drawing{opacity:.25}
+.experience .photographic-opening .opening-orb{opacity:.55;width:65px;height:65px}
+.experience.immersive .w-illustration .photographic-art{display:block;width:100%;height:auto;aspect-ratio:460/360;border-radius:180px 180px 8px 8px;box-shadow:0 25px 65px #0002;outline:1px solid color-mix(in srgb,var(--accent) 50%,transparent);outline-offset:9px}
+.experience.immersive .art-halo{display:none}
+.experience.immersive .blessing-ornament{width:210px;height:135px;overflow:hidden;border-radius:110px 110px 6px 6px}
+.experience.immersive .blessing-ornament .photographic-art{width:100%;height:100%}
+.experience.immersive .footer-art .photographic-art{border-radius:100px 100px 5px 5px;opacity:.7}
+@media(max-width:799px){.theme-preview.photographic-preview{padding:20px 14px;min-height:240px}.theme-preview.photographic-preview strong{font-size:27px}.theme-preview.photographic-preview small{font-size:10px}.theme-preview.photographic-preview>span{font-size:8px;letter-spacing:1px}.experience.immersive[class] .w-illustration .photographic-art{outline-offset:5px;border-radius:130px 130px 8px 8px}.experience .photographic-opening .opening-landscape{object-position:50% 50%}}
+@media(prefers-reduced-motion:reduce){.template-card:hover .preview-scene{transform:none}.theme-preview.photographic-preview .preview-scene{transition:none}}

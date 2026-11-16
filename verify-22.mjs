@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+let t=readFileSync('verify.mjs','utf8');t=t.replaceAll('designs.length,21','designs.length,22').replaceAll('.size,21','.size,22').replace("readFileSync('src/royal-scroll.css','utf8');","readFileSync('src/royal-scroll.css','utf8')+readFileSync('src/palace-garden.css','utf8');");t=t.replace("const required=",`const {scrollUnfurlProgress}=await import('./src/scroll-progress.js');
+assert.equal(scrollUnfurlProgress(900,700,800),0);
+assert.equal(scrollUnfurlProgress(-100,700,800),1);
+const down=[650,500,300,100,-100].map(top=>scrollUnfurlProgress(top,700,800));
+for(let i=1;i<down.length;i++)assert.ok(down[i]>=down[i-1]);
+assert.deepEqual([-100,100,300,500,650].map(top=>scrollUnfurlProgress(top,700,800)),[...down].reverse());
+assert.ok(scrollUnfurlProgress(300,700,800)>0&&scrollUnfurlProgress(300,700,800)<1);
+assert.equal(scrollUnfurlProgress(900,0,0),0);
+assert.equal(readFileSync('public/artwork/palace-doors.webp').toString('ascii',8,12),'WEBP');
+const required=`);
+t=t.replace("if(design.id==='21'){", "if(design.id==='22'){assert.ok(html.includes('opening-carved-doors'));assert.ok(html.includes('layout-palacegarden'));}\n if(design.id==='21'){");t=t.replaceAll('105 event-image','110 event-image').replaceAll('21 event entrance','22 event entrance').replaceAll('21 unique','22 unique').replaceAll('(105 placements)','(110 placements)');t=t.replace("console.log('PASS countdown rollover", "console.log('PASS scroll-linked unfurl: endpoints, continuous intermediate positions, down/up reversibility.');\nconsole.log('PASS countdown rollover");writeFileSync('verify.mjs',t);
+let h=readFileSync('index.html','utf8').replace('Explore 21 designs','Explore 22 designs');writeFileSync('index.html',h);
+let r=readFileSync('README.md','utf8').replaceAll('21 animated','22 animated').replaceAll('all 21','all 22').replaceAll('105 event-image','110 event-image').replaceAll('21 card entrance','22 card entrance');r+='\n## New: 22 — The Palace Garden Invite\n\nRoute: `/?theme=the-palace-garden-invite`. A dedicated recreation of the supplied `invites.mp4` design: carved palace doors, Ganesh welcome, pink floral invitation, arched portraits, scratch-date reveal, Polaroid gallery, pastel illustrated event cards and scenic footer. It uses original replacement artwork and shared placeholder content, not the original website assets or source. It is a close design recreation, not a verified pixel-identical copy.\n\nTemplate 21 scroll fix: the paper clip and lower roller are now calculated directly from window scroll position through a passive scroll listener and a single requestAnimationFrame update. The animation reverses on upward scrolling. Pause motion and reduced-motion show the full readable scroll. No timed entrance controls the unfurl.\n';writeFileSync('README.md',r);
+let b=readFileSync('BEFORE-SHARING.md','utf8').replaceAll('All 21','All 22');b+='\nTemplate 22 is styled in `src/palace-garden.css`; its carved-door asset is `public/artwork/palace-doors.webp`. It uses the shared placeholder wedding content and original replacement images.\n';writeFileSync('BEFORE-SHARING.md',b);

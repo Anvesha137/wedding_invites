@@ -5,3 +5,5 @@ export const designs=[
 designs.push({id:'21',name:'The Royal Scroll',category:'Royal',art:'royalscroll',bg:'#f3f3e9',accent:'#b39150',ink:'#702338',city:'Udaipur',slug:'the-royal-scroll',mood:'Burgundy scrolls, palace gardens & golden elephants',line:'An invitation fit for our forever.'});
 
 designs.push({id:'22',name:'The Palace Garden Invite',category:'Royal',art:'palacegarden',bg:'#fcf3ec',accent:'#bd9a5a',ink:'#8b425b',city:'Jaisalmer',slug:'the-palace-garden-invite',mood:'Carved doors, pastel florals & an illustrated celebration',line:'Two souls, one heart, one beautiful journey.'});
+
+for(const d of designs){d.image=Number(d.id)<=20?`/artwork/themes/${d.art}.webp`:d.id==='21'?'/artwork/royal-mandap.webp':'/artwork/palace-doors.webp';d.thumbnail=Number(d.id)<=20?`/artwork/themes/${d.art}-preview.webp`:d.image;}

@@ -6,8 +6,8 @@ export function OpeningScene({design:d}){
  const dawn=['warli','temple','wildflower','postcard','watercolour'].includes(d.art);
  const night=['celestial','blacktie'].includes(d.art);
  const birds=['mughal','jaipur','pichwai','kashmir','toile','wildflower','postcard','palacegarden'].includes(d.art);
- return <div className={`opening-scene scene-${openingScenes[d.art]} ${dawn?'has-dawn':''} ${night?'has-moon':''}`} aria-hidden="true">
- {(dawn||night)&&<img className="opening-landscape" src={night?'/artwork/moonlit-garden.png':'/artwork/sunrise-garden.png'} alt=""/>}
+ return <div className={`opening-scene photographic-opening scene-${openingScenes[d.art]} ${dawn?'has-dawn':''} ${night?'has-moon':''}`} aria-hidden="true">
+ <img className="opening-landscape" src={d.image} alt="" fetchPriority="high"/>
  <div className="opening-light"/><div className="opening-orb"/>
  <div className="opening-art opening-art-left"><Art design={d}/></div><div className="opening-art opening-art-right"><Art design={d}/></div>
  <svg className="opening-drawing" viewBox="0 0 1000 900" preserveAspectRatio="xMidYMid slice"><path pathLength="1" d="M40 850V230Q40 80 180 70H820Q960 80 960 230V850M75 850V240Q75 115 190 105H810Q925 115 925 240V850M100 790Q200 750 120 650T180 480Q70 420 130 320M900 790Q800 750 880 650T820 480Q930 420 870 320M300 840Q500 740 700 840M370 850Q500 790 630 850"/></svg>
