@@ -40,7 +40,7 @@ Features: ${features.length ? features.join(', ') : 'Not specified'}
 Additional requirements: ${form.notes.trim() || 'None'}
 
 Please share the details and next steps. Thank you!`
-    window.open(`https://wa.me/917819479099?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
+    window.open(`https://wa.me/917619479099?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer')
   }
 
   return <div className="site-shell">
@@ -108,7 +108,7 @@ Please share the details and next steps. Thank you!`
       </section>
 
       <section className="enquiry-section section-pad" id="enquire">
-        <div className="enquiry-intro"><div className="eyebrow">YOUR TURN, LOVE</div><h2>Let's make something <em>lovely.</em></h2><p>Tell us a little about your celebration. Your chosen design will come along with your enquiry, so you don't have to explain it all over again.</p><div className="contact-note"><span>HAVE A QUESTION?</span><a href="https://wa.me/917819479099" target="_blank" rel="noreferrer">Chat with us on WhatsApp <ArrowUpRight size={14} /></a></div></div>
+        <div className="enquiry-intro"><div className="eyebrow">YOUR TURN, LOVE</div><h2>Let's make something <em>lovely.</em></h2><p>Tell us a little about your celebration. Your chosen design will come along with your enquiry, so you don't have to explain it all over again.</p><div className="contact-note"><span>HAVE A QUESTION?</span><a href="https://wa.me/917619479099" target="_blank" rel="noreferrer">Chat with us on WhatsApp <ArrowUpRight size={14} /></a></div></div>
         <form className="enquiry-form" onSubmit={submitInquiry}>
           <div className="form-heading"><div><span>LET'S GET STARTED</span><h3>A few details about your day.</h3></div><span className="required-note">* REQUIRED</span></div>
           <div className="form-grid">
@@ -131,7 +131,7 @@ Please share the details and next steps. Thank you!`
       </section>
     </main>
 
-    <footer className="site-footer"><a href="#" className="wordmark">the wedding edit<span>.</span><small>A LITTLE WEBSITE FOR YOUR FOREVER</small></a><div>MADE WITH CARE, FOR YOUR BIG DAY <Heart size={12} /></div><a href="https://wa.me/917819479099" target="_blank" rel="noreferrer">WHATSAPP US <ArrowUpRight size={13} /></a></footer>
+    <footer className="site-footer"><a href="#" className="wordmark">the wedding edit<span>.</span><small>A LITTLE WEBSITE FOR YOUR FOREVER</small></a><div>MADE WITH CARE, FOR YOUR BIG DAY <Heart size={12} /></div><a href="https://wa.me/917619479099" target="_blank" rel="noreferrer">WHATSAPP US <ArrowUpRight size={13} /></a></footer>
 
   </div>
 }
