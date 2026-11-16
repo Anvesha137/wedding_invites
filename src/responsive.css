@@ -1,0 +1,79 @@
+/* Loaded last. The root attribute keeps responsive rules above theme-specific selectors. */
+.experience.immersive[class] *, .experience.immersive[class] *::before, .experience.immersive[class] *::after{box-sizing:border-box}
+.experience.immersive[class] img{max-width:100%}
+.experience.immersive[class] .event-body,.experience.immersive[class] .person-copy,.experience.immersive[class] .rsvp-intro{min-width:0;overflow-wrap:break-word}
+@media (min-width:800px) and (max-width:1100px){
+ .experience.immersive[class] .celebration-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ .experience.immersive[class] .event-card{display:block;grid-column:auto;padding:0}
+ .experience.immersive[class] .event-photo{height:auto;min-height:0;aspect-ratio:4/3}
+ .experience.immersive[class] .w-section{padding-inline:5%}
+}
+@media (max-width:799px){
+ .experience.immersive[class]{width:100%;max-width:100%;}
+ .experience.immersive[class] .experience-content>main{width:100%;max-width:100%;margin:0}
+ .experience.immersive[class] .w-section{width:100%;max-width:100%;padding:56px clamp(18px,5vw,32px);margin:0;min-height:0}
+ .experience.immersive[class] .celebration-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:30px;width:100%;max-width:100%}
+ .experience.immersive[class] .event-card{display:block;grid-column:auto!important;grid-row:auto;width:100%;min-width:0;max-width:100%;margin:0;padding:0;rotate:0;text-align:left}
+ .experience.immersive[class] .event-photo{display:block;width:100%;height:auto;min-height:0;max-height:none;aspect-ratio:4/3;position:relative}
+ .experience.immersive[class] .event-photo img{display:block;width:100%;height:100%;object-fit:cover}
+ .experience.immersive[class] .event-photo-caption{font-size:12px;line-height:1.4;letter-spacing:.02em;max-width:100%;padding:12px 18px;white-space:normal;overflow-wrap:normal}
+ .experience.immersive[class] .event-body{width:100%;padding:24px;display:block}
+ .experience.immersive[class] .event-card h3{font-size:clamp(30px,8vw,42px);line-height:1.15;letter-spacing:-.03em;white-space:normal;overflow-wrap:break-word;margin-block:12px}
+ .experience.immersive[class] .event-card p,.experience.immersive[class] .event-card dd{font-size:15px;line-height:1.65;max-width:none;word-break:normal;white-space:normal}
+ .experience.immersive[class] .event-card .w-eyebrow{font-size:10px;line-height:1.7;letter-spacing:1.2px}
+ .experience.immersive[class] .event-card-top{display:flex;justify-content:space-between;align-items:center;width:100%;gap:16px}
+ .experience.immersive[class] .event-index{white-space:nowrap;font-size:10px}
+ .experience.immersive[class] .event-card dl{display:grid;grid-template-columns:1fr;gap:18px;margin:22px 0}
+ .experience.immersive[class] .event-card dt{font-size:10px;letter-spacing:1.5px;margin-bottom:5px}
+ .experience.immersive[class] .event-card dd{margin:0}
+ .experience.immersive[class] .event-actions{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:flex-start;width:100%}
+ .experience.immersive[class] .event-actions a,.experience.immersive[class] .event-actions button{display:inline-flex;align-items:center;min-height:44px;font-size:12px;white-space:normal}
+ .experience.immersive[class] .wedding-hero{display:flex;flex-direction:column;width:100%;min-height:0;padding:42px 22px 95px;gap:25px}
+ .experience.immersive[class] .wedding-intro{width:100%;min-width:0;max-width:100%;margin:auto;text-align:center}
+ .experience.immersive[class] .wedding-hero h1{font-size:clamp(44px,12vw,76px)!important;line-height:1.12;letter-spacing:-2px;overflow-wrap:break-word}
+ .experience.immersive[class] .w-illustration{width:min(100%,400px);height:auto;min-height:0;max-width:100%;margin:auto}
+ .experience.immersive[class] .w-tagline{font-size:18px;max-width:100%}
+ .experience.immersive[class] .hero-bottom{gap:12px;flex-wrap:wrap;left:18px;right:18px;bottom:12px;font-size:9px}
+ .experience.immersive[class] .hero-bottom button{min-height:44px}
+ .experience.immersive[class] .section-title h2,.experience.immersive[class] .w-section>h2,.experience.immersive[class] .rsvp-intro h2{font-size:clamp(32px,8vw,46px);line-height:1.2;letter-spacing:-1px}
+ .experience.immersive[class] .couple-grid,.experience.immersive[class] .story-timeline,.experience.immersive[class] .travel-grid,.experience.immersive[class] .rsvp-section{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+ .experience.immersive[class] .person-card{display:block;width:100%;margin:0;rotate:0;padding:0;min-width:0}
+ .experience.immersive[class] .portrait{max-width:100%;margin:0}
+ .experience.immersive[class] .portrait img{height:clamp(280px,90vw,430px);width:100%;object-fit:cover}
+ .experience.immersive[class] .person-copy{padding:24px 0 0}
+ .experience.immersive[class] .couple-amp{display:none}
+ .experience.immersive[class] .story-timeline article{width:100%;margin:0;padding:26px;rotate:0;grid-column:auto}
+ .experience.immersive[class] .story-timeline p{max-width:none}
+ .experience.immersive[class] .countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;width:100%;margin:30px 0}
+ .experience.immersive[class] .countdown>div{min-width:0;width:100%;padding:18px 2px;margin:0}
+ .experience.immersive[class] .countdown strong{font-size:clamp(28px,8vw,44px);letter-spacing:-1px}
+ .experience.immersive[class] .countdown span{font-size:8px;letter-spacing:.5px}
+ .experience.immersive[class] .album-grid{grid-template-columns:minmax(0,1fr);gap:24px;max-width:100%}
+ .experience.immersive[class] .album-photo{width:100%;min-width:0;max-width:100%;margin:0!important;rotate:0;flex-basis:85%;}
+ .experience.immersive[class] .album-photo img{width:100%;height:clamp(230px,75vw,400px);object-fit:cover}
+ .experience.immersive[class] .rsvp-row{display:grid;grid-template-columns:minmax(0,1fr);gap:18px}
+ .experience.immersive[class] form{width:100%;min-width:0;padding:24px 18px}
+ .experience.immersive[class] input:not([type=checkbox]),.experience.immersive[class] select,.experience.immersive[class] textarea{width:100%;min-width:0;max-width:100%;font-size:16px;min-height:44px}
+ .experience.immersive[class] .event-checkboxes{min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
+ .experience.immersive[class] .event-checkboxes label{min-height:44px;display:flex;align-items:center;gap:10px}
+ .experience.immersive[class] .invitation-gate{padding:16px 0 36px;align-items:center;min-height:100svh}
+ .experience.immersive[class] .gate-content{width:88%;max-width:480px;min-width:0;max-height:calc(100svh - 52px);padding:24px 18px!important;flex-shrink:0}
+ .experience.immersive[class] .gate-content h1{font-size:clamp(34px,9vw,54px)!important;line-height:1.15;letter-spacing:-1px}
+ .experience.immersive[class] .gate-content .ganesh-blessing{max-width:100%;width:155px}
+ .experience.immersive[class] .gate-content .ganesh-image img{height:100px}
+ .experience.immersive[class] .silent-entry,.experience.immersive[class] .gate-back{min-height:44px;display:inline-flex;align-items:center;justify-content:center;margin-top:4px}
+ .experience.immersive[class] .gate-design{bottom:8px;max-width:90%;font-size:8px;text-align:center}
+ .experience.immersive[class] .experience-controls{left:50%;right:auto;bottom:max(10px,env(safe-area-inset-bottom));transform:translateX(-50%);width:max-content;max-width:calc(100% - 20px);padding:4px 8px;gap:3px}
+ .experience.immersive[class] .experience-controls button{min-height:44px;padding:8px;font-size:11px}
+ .experience.immersive[class] .music-options{right:10px;left:10px;bottom:80px;width:auto;max-width:none}
+ .experience.immersive[class] .w-footer{padding:45px 24px 100px}
+ .experience.immersive[class] .w-footer h2{font-size:clamp(34px,10vw,55px)}
+ .experience.immersive[class] .gallery-dialog{width:calc(100% - 16px);max-width:100%;padding:8px}
+ .experience.immersive[class] .gallery-viewer img{max-width:100%;max-height:70svh;object-fit:contain}
+ .experience.immersive[class] .viewer-bottom{gap:8px;flex-wrap:wrap}
+ .experience.immersive[class] .royal-date-stage>.royal-elephant{display:none}
+ .experience.immersive[class] .royal-date-slots{gap:8px;max-width:100%}
+ .experience.immersive[class] .date-cartouche{width:70px}
+ .experience.immersive[class] .scroll-paper{padding:42px 20px}
+ .experience.immersive[class] .scroll-paper h2{font-size:38px}
+}

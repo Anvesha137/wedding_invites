@@ -1,0 +1,50 @@
+/* One continuous, theme-coloured environment behind the entire invitation. */
+.experience.immersive{position:relative;isolation:isolate;background:var(--bg)!important;background-image:none!important;overflow:clip}
+.immersive-scene{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;background:var(--bg);contain:strict;--scene-far:0px;--scene-mid:0px;--scene-near:0px;--scene-x:0px}
+.experience.immersive>.experience-content{position:relative;z-index:1}
+.scene-far{position:absolute;inset:-5% -5% -12%;transform:translate3d(calc(var(--scene-x) * -.3),var(--scene-far),0);opacity:.19}
+.scene-far>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 65%}
+.scene-far>.theme-art{width:100%;height:100%;object-fit:cover;opacity:.6}
+.scene-colour{position:absolute;inset:0;background:linear-gradient(105deg,color-mix(in srgb,var(--bg) 86%,transparent) 0%,color-mix(in srgb,var(--bg) 68%,transparent) 46%,color-mix(in srgb,var(--bg) 85%,transparent) 100%)}
+.scene-scenic .scene-far{opacity:.75}.scene-scenic .scene-colour{background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 88%,transparent),color-mix(in srgb,var(--bg) 70%,transparent) 50%,color-mix(in srgb,var(--bg) 88%,transparent))}
+.scene-mid{position:absolute;width:min(1000px,95vw);height:95vh;left:40%;top:10%;opacity:.065;transform:translate3d(var(--scene-x),var(--scene-mid),0) rotate(-8deg)}
+.scene-mid .theme-art{width:100%;height:100%}
+.scene-near{position:absolute;inset:-5% -5% -25%;transform:translate3d(calc(var(--scene-x) * 1.5),var(--scene-near),0)}
+.scene-near>span{position:absolute;border:1px solid var(--accent);border-radius:50%;opacity:.12;width:40vw;height:40vw;left:-25vw;top:16%;box-shadow:0 0 80px color-mix(in srgb,var(--accent) 14%,transparent)}
+.scene-near>span:nth-child(2){left:auto;right:-23vw;top:55%;width:38vw;height:38vw;border-style:dashed}
+.scene-near>span:nth-child(3){left:65%;top:-10%;width:15vw;height:15vw;opacity:.07;background:radial-gradient(circle,var(--accent),transparent 70%);border:0}
+.scene-grain{position:absolute;inset:0;opacity:.11;background-image:radial-gradient(var(--accent) .6px,transparent .6px);background-size:8px 8px}
+/* Remove colour blocks and horizontal seams without removing theme-specific card artwork. */
+.experience.immersive .w-section,.experience.immersive .wedding-hero,.experience.immersive .w-footer,.experience.immersive .experience-content>main{background:transparent!important;background-image:none!important;border:0!important;outline:0!important;box-shadow:none!important;color:var(--ink);margin-inline:0}
+.experience.immersive .w-section:before,.experience.immersive .w-section:after{background:none!important;border:0!important}
+.experience.immersive .experience-content>main{margin-inline:auto;max-width:1440px}
+.experience.immersive.layout-palacegarden .experience-content>main{max-width:980px}
+.experience.immersive .w-section{overflow:visible;isolation:isolate}
+.experience.immersive .celebration-ribbon{background:transparent!important;color:var(--ink)!important;border:0;opacity:.65}
+.experience.immersive .hero-bottom{background:transparent!important;backdrop-filter:none;border-color:color-mix(in srgb,var(--ink),transparent 80%)}
+.experience.immersive .w-footer{max-width:none!important}
+.experience.immersive .w-footer>small{background:none!important}
+.experience.immersive .portrait,.experience.immersive .event-card,.experience.immersive .rsvp-section form,.experience.immersive .destination-card{box-shadow:0 12px 35px color-mix(in srgb,var(--ink) 10%,transparent),0 1px 0 #ffffff20}
+.experience.immersive .blessing-copy,.experience.immersive .section-title{position:relative}
+.experience.immersive .w-illustration{background:transparent}
+.experience.immersive .scene-far,.experience.immersive .scene-mid,.experience.immersive .scene-near{will-change:transform}
+/* Depth is independent of each theme's existing transform animation. */
+.experience.immersive .celebration-cards,.experience.immersive .couple-grid,.experience.immersive .story-timeline,.experience.immersive .album-grid{perspective:1500px;perspective-origin:50% 45%}
+.experience.immersive.motion-on .depth-card{transform-origin:50% 85%;rotate:1 0 0 9deg;translate:0 32px -45px;scale:.97;transition:rotate 1.15s cubic-bezier(.16,.75,.2,1),translate 1.15s cubic-bezier(.16,.75,.2,1),scale 1.15s cubic-bezier(.16,.75,.2,1),opacity .9s,box-shadow .45s;transition-delay:calc(var(--i,0) * 70ms);backface-visibility:hidden}
+.experience.immersive.motion-on .depth-card.is-visible{rotate:1 0 0 0deg;translate:0 0 0;scale:1}
+.experience.immersive.motion-on .depth-card:nth-child(even){transform-origin:50% 15%}
+.experience.immersive.motion-on .event-card .event-photo{transform:translateZ(8px)}
+@media(hover:hover) and (pointer:fine){.experience.immersive.motion-on .depth-card.is-visible:hover{rotate:0 1 0 -1.5deg;translate:0 -7px 12px;scale:1.006;transition-delay:0s;box-shadow:0 24px 50px color-mix(in srgb,var(--ink) 16%,transparent)}.experience.immersive.motion-on .depth-card:nth-child(even).is-visible:hover{rotate:0 1 0 1.5deg}}
+.experience.immersive .collection-return{display:block;width:max-content;margin:0 auto 35px!important;font-size:11px!important}
+/* Keep themed contrast when former dark/light section blocks become transparent. */
+.experience.immersive.layout-festival .couple-section{color:var(--ink)}
+.experience.immersive.layout-royalscroll .story-section,.experience.immersive.layout-royalscroll .celebration-section{color:var(--ink)}
+.experience.immersive.layout-royalscroll .story-timeline article{background:color-mix(in srgb,var(--bg) 88%,transparent)}
+.experience.immersive.layout-royalscroll .timeline-marker{background:var(--bg);color:var(--ink)}
+.experience.immersive.layout-palacegarden .scene-colour{background:linear-gradient(125deg,#fce5eee8,#fff6e7d9 50%,#edf3dfeb)}
+.experience.immersive.layout-orbit .scene-near>span{opacity:.2}
+.experience.immersive.layout-magazine .scene-mid{opacity:.035}.experience.immersive.layout-magazine .scene-near>span{border-radius:0;rotate:15deg}
+.experience.immersive.layout-baraat .scene-near>span,.experience.immersive.layout-festival .scene-near>span{border-radius:8%;rotate:45deg}
+@media(max-width:760px){.scene-mid{width:140vw;left:15%;opacity:.045}.scene-near>span{width:75vw;height:75vw;left:-55vw}.scene-near>span:nth-child(2){width:70vw;height:70vw;right:-50vw}.experience.immersive .w-section{margin:0!important}.experience.immersive.motion-on .depth-card{rotate:1 0 0 5deg;translate:0 22px -20px;scale:.985}.experience.immersive.motion-on .depth-card.is-visible{rotate:1 0 0 0deg;translate:0 0 0;scale:1}.scene-far{inset:-5% -8% -15%}.experience.immersive .w-footer{padding-bottom:130px}}
+.experience.immersive.motion-off .depth-card{rotate:none!important;translate:none!important;scale:none!important;transition:none!important}.experience.immersive.motion-off .scene-far,.experience.immersive.motion-off .scene-mid,.experience.immersive.motion-off .scene-near{will-change:auto}
+@media(prefers-reduced-motion:reduce){.experience.immersive .depth-card{rotate:none!important;translate:none!important;scale:none!important;transition:none!important}.immersive-scene>div{transform:none!important;will-change:auto!important}}

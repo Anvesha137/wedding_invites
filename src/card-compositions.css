@@ -1,0 +1,115 @@
+/* Explicit event compositions per theme, retaining each theme’s entrance animation. */
+.experience.immersive.theme-madhubani .celebration-cards{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.experience.immersive.theme-madhubani .event-card{min-width:0;border-radius:50% 50% 8px 8px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-madhubani .event-photo{aspect-ratio:4 / 3;height:auto;min-height:0;border-radius:50% 50% 8px 8px}
+.experience.immersive.theme-madhubani .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-madhubani .event-card:nth-child(even){margin-top:35px}.experience.immersive.theme-madhubani .event-card:last-child{grid-column:1 / -1}}
+.experience.immersive.theme-warli .celebration-cards{display:grid;grid-template-columns:1fr;gap:34px;align-items:start}
+.experience.immersive.theme-warli .event-card{min-width:0;border-radius:4px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-warli .event-photo{aspect-ratio:16 / 8;height:auto;min-height:0;border-radius:4px}
+.experience.immersive.theme-warli .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-warli .event-card{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.experience.immersive.theme-warli .event-photo{height:100%;min-height:350px}.experience.immersive.theme-warli .event-card:nth-child(even) .event-photo{order:2}.experience.immersive.theme-warli .event-body{padding:40px}}
+.experience.immersive.theme-mughal .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.experience.immersive.theme-mughal .event-card{min-width:0;border-radius:180px 180px 8px 8px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-mughal .event-photo{aspect-ratio:4 / 5;height:auto;min-height:0;border-radius:180px 180px 8px 8px}
+.experience.immersive.theme-mughal .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-mughal .event-card:nth-child(even){margin-top:70px}.experience.immersive.theme-mughal .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-jaipur .celebration-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:46px;align-items:start}
+.experience.immersive.theme-jaipur .event-card{min-width:0;border-radius:120px 120px 0 0;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-jaipur .event-photo{aspect-ratio:3 / 4;height:auto;min-height:0;border-radius:120px 120px 0 0}
+.experience.immersive.theme-jaipur .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-jaipur .event-card:nth-child(even){margin-top:35px}.experience.immersive.theme-jaipur .event-card:last-child{grid-column:1 / -1}}
+.experience.immersive.theme-pichwai .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.experience.immersive.theme-pichwai .event-card{min-width:0;border-radius:50% 50% 12px 12px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-pichwai .event-photo{aspect-ratio:1 / 1;height:auto;min-height:0;border-radius:50% 50% 12px 12px}
+.experience.immersive.theme-pichwai .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-pichwai .event-card:nth-child(even){margin-top:100px}.experience.immersive.theme-pichwai .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-kalamkari .celebration-cards{display:grid;grid-template-columns:1fr;gap:34px;align-items:start}
+.experience.immersive.theme-kalamkari .event-card{min-width:0;border-radius:2px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-kalamkari .event-photo{aspect-ratio:4 / 3;height:auto;min-height:0;border-radius:2px}
+.experience.immersive.theme-kalamkari .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-kalamkari .event-card{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.experience.immersive.theme-kalamkari .event-photo{height:100%;min-height:350px}.experience.immersive.theme-kalamkari .event-card:nth-child(even) .event-photo{order:2}.experience.immersive.theme-kalamkari .event-body{padding:40px}}
+.experience.immersive.theme-phulkari .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.experience.immersive.theme-phulkari .event-card{min-width:0;border-radius:0;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-phulkari .event-photo{aspect-ratio:1 / 1;height:auto;min-height:0;border-radius:0}
+.experience.immersive.theme-phulkari .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-phulkari .event-card:nth-child(even){margin-top:50px}.experience.immersive.theme-phulkari .event-card:last-child{grid-column:1 / -1}}
+.experience.immersive.theme-alpana .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+.experience.immersive.theme-alpana .event-card{min-width:0;border-radius:160px 160px 20px 20px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-alpana .event-photo{aspect-ratio:4 / 3;height:auto;min-height:0;border-radius:160px 160px 20px 20px}
+.experience.immersive.theme-alpana .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-alpana .event-card:nth-child(even){margin-top:0px}.experience.immersive.theme-alpana .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-temple .celebration-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:start}
+.experience.immersive.theme-temple .event-card{min-width:0;border-radius:150px 150px 0 0;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-temple .event-photo{aspect-ratio:3 / 4;height:auto;min-height:0;border-radius:150px 150px 0 0}
+.experience.immersive.theme-temple .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-temple .event-card:nth-child(even){margin-top:50px}.experience.immersive.theme-temple .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-kashmir .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.experience.immersive.theme-kashmir .event-card{min-width:0;border-radius:100px 8px 100px 8px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-kashmir .event-photo{aspect-ratio:4 / 3;height:auto;min-height:0;border-radius:100px 8px 100px 8px}
+.experience.immersive.theme-kashmir .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-kashmir .event-card:nth-child(even){margin-top:80px}.experience.immersive.theme-kashmir .event-card:last-child{grid-column:1 / -1}}
+.experience.immersive.theme-truck .celebration-cards{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.experience.immersive.theme-truck .event-card{min-width:0;border-radius:28px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-truck .event-photo{aspect-ratio:16 / 9;height:auto;min-height:0;border-radius:28px}
+.experience.immersive.theme-truck .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-truck .event-card{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.experience.immersive.theme-truck .event-photo{height:100%;min-height:350px}.experience.immersive.theme-truck .event-card:nth-child(even) .event-photo{order:2}.experience.immersive.theme-truck .event-body{padding:40px}}
+.experience.immersive.theme-doodle .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:start}
+.experience.immersive.theme-doodle .event-card{min-width:0;border-radius:35px 8px 40px 12px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-doodle .event-photo{aspect-ratio:1 / 1;height:auto;min-height:0;border-radius:35px 8px 40px 12px}
+.experience.immersive.theme-doodle .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-doodle .event-card:nth-child(even){margin-top:60px}.experience.immersive.theme-doodle .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-doodle .event-card{padding:12px;box-shadow:8px 16px 35px #0002}.experience.immersive.theme-doodle .event-card:nth-child(odd){rotate:-1.5deg}.experience.immersive.theme-doodle .event-card:nth-child(even){rotate:1.5deg}
+.experience.immersive.theme-toile .celebration-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px;align-items:start}
+.experience.immersive.theme-toile .event-card{min-width:0;border-radius:150px 150px 4px 4px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-toile .event-photo{aspect-ratio:4 / 5;height:auto;min-height:0;border-radius:150px 150px 4px 4px}
+.experience.immersive.theme-toile .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-toile .event-card:nth-child(even){margin-top:30px}.experience.immersive.theme-toile .event-card:last-child{grid-column:1 / -1}}
+.experience.immersive.theme-watercolour .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.experience.immersive.theme-watercolour .event-card{min-width:0;border-radius:45% 45% 12px 12px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-watercolour .event-photo{aspect-ratio:1 / 1;height:auto;min-height:0;border-radius:45% 45% 12px 12px}
+.experience.immersive.theme-watercolour .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-watercolour .event-card:nth-child(even){margin-top:100px}.experience.immersive.theme-watercolour .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-wildflower .celebration-cards{display:grid;grid-template-columns:1fr;gap:40px;align-items:start}
+.experience.immersive.theme-wildflower .event-card{min-width:0;border-radius:160px 160px 12px 12px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-wildflower .event-photo{aspect-ratio:16 / 9;height:auto;min-height:0;border-radius:160px 160px 12px 12px}
+.experience.immersive.theme-wildflower .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-wildflower .event-card{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.experience.immersive.theme-wildflower .event-photo{height:100%;min-height:350px}.experience.immersive.theme-wildflower .event-card:nth-child(even) .event-photo{order:2}.experience.immersive.theme-wildflower .event-body{padding:40px}}
+.experience.immersive.theme-editorial .celebration-cards{display:grid;grid-template-columns:1fr;gap:46px;align-items:start}
+.experience.immersive.theme-editorial .event-card{min-width:0;border-radius:0;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-editorial .event-photo{aspect-ratio:16 / 9;height:auto;min-height:0;border-radius:0}
+.experience.immersive.theme-editorial .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-editorial .event-card{display:grid;grid-template-columns:1.5fr 1fr;align-items:stretch}.experience.immersive.theme-editorial .event-photo{height:100%;min-height:350px}.experience.immersive.theme-editorial .event-card:nth-child(even) .event-photo{order:2}.experience.immersive.theme-editorial .event-body{padding:40px}}
+.experience.immersive.theme-postcard .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.experience.immersive.theme-postcard .event-card{min-width:0;border-radius:0;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-postcard .event-photo{aspect-ratio:4 / 3;height:auto;min-height:0;border-radius:0}
+.experience.immersive.theme-postcard .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-postcard .event-card:nth-child(even){margin-top:55px}.experience.immersive.theme-postcard .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-postcard .event-card{padding:12px;box-shadow:8px 16px 35px #0002}.experience.immersive.theme-postcard .event-card:nth-child(odd){rotate:-1.5deg}.experience.immersive.theme-postcard .event-card:nth-child(even){rotate:1.5deg}
+.experience.immersive.theme-polaroid .celebration-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:34px;align-items:start}
+.experience.immersive.theme-polaroid .event-card{min-width:0;border-radius:2px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-polaroid .event-photo{aspect-ratio:1 / 1;height:auto;min-height:0;border-radius:2px}
+.experience.immersive.theme-polaroid .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-polaroid .event-card:nth-child(even){margin-top:45px}.experience.immersive.theme-polaroid .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-polaroid .event-card{padding:12px;box-shadow:8px 16px 35px #0002}.experience.immersive.theme-polaroid .event-card:nth-child(odd){rotate:-1.5deg}.experience.immersive.theme-polaroid .event-card:nth-child(even){rotate:1.5deg}
+.experience.immersive.theme-celestial .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.experience.immersive.theme-celestial .event-card{min-width:0;border-radius:200px 200px 4px 4px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-celestial .event-photo{aspect-ratio:4 / 5;height:auto;min-height:0;border-radius:200px 200px 4px 4px}
+.experience.immersive.theme-celestial .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-celestial .event-card:nth-child(even){margin-top:100px}.experience.immersive.theme-celestial .event-card:last-child{grid-column:1 / -1}}
+.experience.immersive.theme-blacktie .celebration-cards{display:grid;grid-template-columns:1fr;gap:46px;align-items:start}
+.experience.immersive.theme-blacktie .event-card{min-width:0;border-radius:0;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-blacktie .event-photo{aspect-ratio:21 / 9;height:auto;min-height:0;border-radius:0}
+.experience.immersive.theme-blacktie .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-blacktie .event-card{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.experience.immersive.theme-blacktie .event-photo{height:100%;min-height:350px}.experience.immersive.theme-blacktie .event-card:nth-child(even) .event-photo{order:2}.experience.immersive.theme-blacktie .event-body{padding:40px}}
+.experience.immersive.theme-royalscroll .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.experience.immersive.theme-royalscroll .event-card{min-width:0;border-radius:4px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-royalscroll .event-photo{aspect-ratio:4 / 3;height:auto;min-height:0;border-radius:4px}
+.experience.immersive.theme-royalscroll .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-royalscroll .event-card:nth-child(even){margin-top:65px}.experience.immersive.theme-royalscroll .event-card:last-child{grid-column:auto}}
+.experience.immersive.theme-palacegarden .celebration-cards{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.experience.immersive.theme-palacegarden .event-card{min-width:0;border-radius:160px 160px 8px 8px;overflow:hidden;margin:0;grid-column:auto;background:var(--surface)}
+.experience.immersive.theme-palacegarden .event-photo{aspect-ratio:4 / 5;height:auto;min-height:0;border-radius:160px 160px 8px 8px}
+.experience.immersive.theme-palacegarden .event-photo img{height:100%;width:100%;object-fit:cover}
+@media(min-width:800px){.experience.immersive.theme-palacegarden .event-card:nth-child(even){margin-top:50px}.experience.immersive.theme-palacegarden .event-card:last-child{grid-column:1 / -1}}
+@media(max-width:799px){.experience.immersive .celebration-cards{grid-template-columns:minmax(0,1fr);gap:35px}.experience.immersive .event-card{margin:0;rotate:0;display:block;grid-column:auto}.experience.immersive .event-photo{aspect-ratio:4/3;max-height:360px}.experience.immersive .event-body{padding:25px}}
