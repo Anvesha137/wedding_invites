@@ -25,6 +25,9 @@ for(const design of designs){
  assert.ok(html.includes('immersive-scene')&&html.includes('opening-scene'),design.name+': layered background and illustrated opening');
  for(const id of ['welcome',...required]) assert.equal((html.match(new RegExp(`id="${id}"`,'g'))||[]).length,1,`${design.name}: ${id}`);
  assert.deepEqual([...presentation(design).sections].sort(),[...required].sort());
+ assert.ok(html.includes(design.image));
+ if(design.storybook)assert.ok(html.includes('narrative-stage'));
+ for(const path of [design.image,design.thumbnail])assert.equal(readFileSync('public'+path).toString('ascii',8,12),'WEBP');
  for(const event of eventTemplates)assert.ok(html.includes(`event-${event.id}`));
  assert.equal((html.match(/Add to Calendar/g)||[]).length,5);
  assert.equal((html.match(/class="person-card"/g)||[]).length,2);
@@ -39,7 +42,7 @@ for(const design of designs){
  assert.ok(html.includes('Which celebrations will you attend?'));
  assert.equal((html.match(/class="event-photo"/g)||[]).length,5);
  assert.equal((html.match(/src="\/artwork\/ganesh-blessing.webp"/g)||[]).length,2);
- for(const event of eventTemplates)assert.ok(html.includes(event.image));
+ for(const event of eventTemplates)assert.ok(html.includes(`src="${design.storybook?'/artwork/illustrated/events/'+event.id+'.webp':event.image}"`));
  assert.ok(html.includes(design.id==='21'?'Reveal the date':'Tap to reveal the date'));
  if(design.id==='22'){assert.ok(html.includes('opening-carved-doors'));assert.ok(html.includes('layout-palacegarden'));}
  if(design.id==='21'){assert.ok(html.includes('royal-scroll-sheet'));assert.ok(html.includes('royal-date-slots'));assert.ok(html.includes('Scroll gallery right'));assert.ok(html.includes('opening-royal-panels'));}

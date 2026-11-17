@@ -44,3 +44,12 @@ Mobile update: responsive.css loads after the theme styles and overrides desktop
 
 ## Deploy on Vercel
 Import Anvesha137/wedding_invites into Vercel. Use the main branch, repository root (./), Vite framework, npm ci install command, npm run build build command and dist output directory. These build settings are included in vercel.json. No environment variables are required for the current demo. The RSVP remains browser-local until a Google Apps Script endpoint is configured.
+
+## Illustrated invitation collection — November 2026
+The first 20 templates now use original portrait-format illustrated scenes, a scroll-linked narrative opening, floating decorative layers, large family invitation typography, five illustrated event vignettes, and arch/medallion/folio/scalloped/theatre card compositions. Both existing video-inspired templates remain available. The complete guest feature set and demo RSVP behavior remain unchanged.
+
+Visual direction was researched from public Missing Piece demos: Mountain, Ayodhya, City, City 2, City 3 and Meenaya. These are original implementations and artwork, not the vendor's Framer templates or exact reproductions. No vendor source or watermarked artwork was copied.
+
+Final optimized assets are in public/artwork/illustrated. PROMPTS.json records the complete prompts and built-in imagegen provenance. Each scene has a smaller lazy-loaded collection preview. User content and the WhatsApp contact +91 761 947 9099 are preserved.
+
+Verification: production build; 22 server-rendered invitations; exact event image references; all scene/thumbnail WebP assets; 198 shipped-CSS grid checks at mobile/tablet sizes. Local browser navigation timed out on localhost and the LAN address; device visual/animation QA remains pending.

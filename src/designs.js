@@ -6,4 +6,8 @@ designs.push({id:'21',name:'The Royal Scroll',category:'Royal',art:'royalscroll'
 
 designs.push({id:'22',name:'The Palace Garden Invite',category:'Royal',art:'palacegarden',bg:'#fcf3ec',accent:'#bd9a5a',ink:'#8b425b',city:'Jaisalmer',slug:'the-palace-garden-invite',mood:'Carved doors, pastel florals & an illustrated celebration',line:'Two souls, one heart, one beautiful journey.'});
 
-for(const d of designs){d.image=Number(d.id)<=20?`/artwork/themes/${d.art}.webp`:d.id==='21'?'/artwork/royal-mandap.webp':'/artwork/palace-doors.webp';d.thumbnail=Number(d.id)<=20?`/artwork/themes/${d.art}-preview.webp`:d.image;}
+for(const d of designs){d.image=Number(d.id)<=20?`/artwork/illustrated/${d.art}.webp`:d.id==='21'?'/artwork/royal-mandap.webp':'/artwork/palace-doors.webp';d.thumbnail=Number(d.id)<=20?`/artwork/illustrated/${d.art}-preview.webp`:d.image;}
+
+for(const d of designs){d.storybook=Number(d.id)<=20;d.ornament=['stars','petals','lanterns'][Number(d.id)%3];d.composition=['arch','medallion','folio','scallop','theatre'][Number(d.id)%5];}
+
+const sceneInks={warli:'#643b24',phulkari:'#742649',alpana:'#7b2826',jaipur:'#fff1d2',temple:'#34463a',kashmir:'#f7e4b3'};for(const d of designs)d.sceneInk=sceneInks[d.art]||d.ink;

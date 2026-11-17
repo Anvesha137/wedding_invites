@@ -3,7 +3,7 @@ import {designs} from './designs';
 import './weddings.css';
 export { WeddingSite } from './experience';
 const repeat=(n,fn)=>Array.from({length:n},(_,i)=>fn(i));
-const vars=d=>({'--bg':d.bg,'--accent':d.accent,'--ink':d.ink});
+const vars=d=>({'--bg':d.bg,'--accent':d.accent,'--ink':d.ink,'--scene-ink':d.sceneInk||d.ink});
 function Flower({x,y,r=22}){return <g transform={`translate(${x} ${y})`}>{repeat(8,i=><ellipse key={i} rx={r/3} ry={r} fill="var(--accent)" opacity=".7" transform={`rotate(${i*45}) translate(0 ${r/2})`}/>)}<circle r={r/4} fill="var(--ink)"/></g>}
 function Lotus({x,y}){return <g transform={`translate(${x} ${y})`} fill="var(--accent)" stroke="var(--ink)"><path d="M0 0Q-55-5-45-35Q-15-30 0 0M0 0Q55-5 45-35Q15-30 0 0M0 0Q-25-30 0-60Q25-30 0 0"/><path d="M-55 8Q0 22 55 8" fill="none"/></g>}
 function Palace({pink=false}){return <g fill="var(--accent)" stroke="var(--ink)" strokeWidth="2">{repeat(pink?7:5,i=><g key={i} transform={`translate(${pink?35+i*58:40+i*80} ${135+Math.abs((pink?3:2)-i)*20})`}><path d="M0 130V0Q25-60 50 0V130Z" opacity=".7"/><path d="M15 125V70Q25 50 35 70V125ZM16 20Q25 0 34 20V40H16Z" fill="var(--bg)"/></g>)}<path d="M15 300H445V330H15Z"/></g>}
@@ -30,5 +30,5 @@ case 'polaroid':c=<>{[0,1,2].map(i=><g key={i} transform={`translate(${40+i*110}
 case 'celestial':c=<g fill="var(--accent)" stroke="var(--accent)"><path d="M255 65A105 105 0 1 0 330 240A100 100 0 0 1 255 65"/>{repeat(32,i=><circle key={i} cx={20+i*127%430} cy={20+i*83%320} r={i%3+1}/>)}<path d="M40 70L100 110L70 200L140 270M330 40L410 100L370 160L425 280" fill="none" opacity=".4"/></g>;break;
 case 'blacktie':c=<g stroke="var(--accent)" fill="none">{repeat(7,i=><path key={i} d={`M${40+i*12} 340V${85+i*12}L230 ${15+i*12}L${420-i*12} ${85+i*12}V340`}/>)}<text x="230" y="220" fontSize="88" textAnchor="middle" fill="var(--accent)" fontFamily="Georgia">A M</text><path d="M180 250H280"/></g>;break;
 }return <svg className="theme-art" viewBox="0 0 460 360" role="img" aria-label={d.mood}>{c}</svg>}
-export function ThemePreview({design:d}){return <div className={`theme-preview photographic-preview theme-${d.art}`} style={vars(d)}><img className="preview-ganesh" src="/artwork/ganesh-blessing.webp" alt="Lord Ganesha" loading="lazy"/><span>{d.city.toUpperCase()} · 18.02.27</span><img className="preview-scene" src={d.thumbnail} alt={d.mood} loading="lazy" decoding="async" width="720" height="480"/><strong>Aarav & Meera</strong><small>{d.line}</small></div>}
+export function ThemePreview({design:d}){return <div className={`theme-preview photographic-preview ${d.storybook?'storybook-preview':''} theme-${d.art}`} style={vars(d)}><img className="preview-ganesh" src="/artwork/ganesh-blessing.webp" alt="Lord Ganesha" loading="lazy"/><span>{d.city.toUpperCase()} · 18.02.27</span><img className="preview-scene" src={d.thumbnail} alt={d.mood} loading="lazy" decoding="async" width="720" height="480"/><strong>Aarav & Meera</strong><small>{d.line}</small></div>}
 

@@ -7,7 +7,7 @@ const file=fs.readdirSync('dist/assets').find(x=>x.endsWith('.css'));
 const css=postcss.parse(fs.readFileSync('dist/assets/'+file,'utf8'));
 // Resolve the simple ancestor-class selectors used by event grid rules in the shipped CSS.
 function columns(design,width){
- const classes=new Set(['experience','immersive','wedding','theme-'+design.art,'layout-'+presentation(design).layout]);let best=null,order=0;
+ const classes=new Set(['experience','immersive','wedding','theme-'+design.art,'layout-'+presentation(design).layout,...(design.storybook?['storybook','composition-'+design.composition]:[])]);let best=null,order=0;
  css.walkRules(rule=>{
   for(let parent=rule.parent;parent;parent=parent.parent){if(parent.type==='atrule'&&parent.name==='media'){
    const q=parent.params;const min=[...q.matchAll(/min-width:\s*([\d.]+)px/g)].map(x=>+x[1]);const max=[...q.matchAll(/max-width:\s*([\d.]+)px/g)].map(x=>+x[1]);
@@ -21,5 +21,5 @@ function columns(design,width){
   }
  });return best?.value;
 }
-for(const design of designs){for(const width of [320,360,390,430,540,768,799])assert.equal(columns(design,width),'minmax(0,1fr)',`${design.name} at ${width}px`);for(const width of [800,1024])assert.equal(columns(design,width),'repeat(2,minmax(0,1fr))',`${design.name} tablet ${width}px`)}
+for(const design of designs){for(const width of [320,360,390,430,540,768,799])assert.equal(columns(design,width),'minmax(0,1fr)',`${design.name} at ${width}px`);for(const width of [800,1024])assert.equal(columns(design,width),design.storybook?'minmax(0,1fr)':'repeat(2,minmax(0,1fr))',`${design.name} tablet ${width}px`)}
 console.log('PASS shipped CSS cascade: all 22 templates, 7 mobile widths and 2 tablet widths (198 checks).');

@@ -6,3 +6,6 @@
 - Couple portraits and gallery photographs currently use remote sample Unsplash image URLs configured in `src/wedding-config.js`; replace for a real wedding.
 - Theme SVG artwork is authored in `src/weddings.jsx`.
 - The user-supplied video was reviewed as design reference. No video imagery was copied into the delivered website.
+- `artwork/illustrated/*.webp`: 20 original illustrated invitation scenes and 20 smaller collection thumbnails, generated with the built-in imagegen tool. Exact prompts are in `artwork/illustrated/PROMPTS.json`.
+- `artwork/illustrated/events/*.webp`: five original miniature-style wedding event illustrations, fictional people.
+- Public Missing Piece demos were examined for design direction; their assets, source and watermarks were not incorporated. These are original designs, not purchased or identical Missing Piece templates.
