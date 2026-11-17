@@ -7,7 +7,7 @@ const file=fs.readdirSync('dist/assets').find(x=>x.endsWith('.css'));
 const css=postcss.parse(fs.readFileSync('dist/assets/'+file,'utf8'));
 // Resolve the simple ancestor-class selectors used by event grid rules in the shipped CSS.
 function columns(design,width){
- const classes=new Set(['experience','immersive','wedding','theme-'+design.art,'layout-'+presentation(design).layout,...(design.storybook?['storybook','composition-'+design.composition]:[])]);let best=null,order=0;
+ const classes=new Set(['experience','immersive','wedding','theme-'+design.art,'layout-'+presentation(design).layout,...(design.storybook?['storybook','pinned-invitation','scene-style-'+(design.sceneStyle||'framed'),'composition-'+design.composition]:[])]);let best=null,order=0;
  css.walkRules(rule=>{
   for(let parent=rule.parent;parent;parent=parent.parent){if(parent.type==='atrule'&&parent.name==='media'){
    const q=parent.params;const min=[...q.matchAll(/min-width:\s*([\d.]+)px/g)].map(x=>+x[1]);const max=[...q.matchAll(/max-width:\s*([\d.]+)px/g)].map(x=>+x[1]);

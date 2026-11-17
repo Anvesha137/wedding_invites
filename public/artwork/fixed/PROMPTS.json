@@ -1,0 +1,22 @@
+[
+  {
+    "name": "blue-canvas",
+    "prompt": "Create an original high-quality background for an animated wedding invitation, portrait 2:3. A continuous deep dusty ocean-blue oil-painted canvas texture, subtle swirling blue grey brush strokes and delicate antique gold streaks. Quiet tonal variation. No objects, no frame, no scenery. Entire image is blue painted sky texture. No lettering, logos, watermarks, UI or collage. Full bleed."
+  },
+  {
+    "name": "rose-sky",
+    "prompt": "Create an original high-quality background for an animated wedding invitation, portrait 2:3. A continuous warm rose-pink, coral peach and muted lilac painted sunset sky texture, soft horizontal clouds and gently visible gouache grain. No objects, no frame, no landscape. Entire image is soft colorful sky. No lettering, logos, watermarks, UI or collage. Full bleed."
+  },
+  {
+    "name": "saffron-sky",
+    "prompt": "Create an original high-quality background for an animated wedding invitation, portrait 2:3. A continuous sunset sky painted in luminous saffron orange and coral at top transitioning to dusty violet and pink at bottom, soft subtle clouds and gouache brush marks. No objects, no frame, no scenery. No lettering, logos, watermarks, UI or collage. Full bleed."
+  },
+  {
+    "name": "temple-valley",
+    "prompt": "Create an original high-quality background for an animated wedding invitation, portrait 2:3. An original ornate Indian temple nestled in Himalayan mountains, tall pink-grey carved temple towers in the lower half, long flower-strewn central approach, pink lilac starry sky occupying upper half, lush pine forest at outer edges. Rich hand-painted gouache miniature illustration with atmospheric depth, no text, no people. Upper half remains quiet for large invitation names. No lettering, logos, watermarks, UI or collage. Full bleed."
+  },
+  {
+    "name": "mountain-frame",
+    "prompt": "Original ornate antique-gold botanical frame for a wedding invitation, portrait 2:3, TRANSPARENT center and transparent background. Only the outer left and right edges have finely painted gold flowers, leaves and curling ribbons, a small crescent moon and tiny ivory palace on fluffy clouds at bottom, a few delicate gold stars near corners. Wide completely transparent center occupying 75% of width and 80% of height. Hand-painted gouache paper-cut theatre with subtle dimensional shadows. No text, logos or watermarks. Isolated decorative overlay asset."
+  }
+]

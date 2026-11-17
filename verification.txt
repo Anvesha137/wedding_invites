@@ -1,5 +1,4 @@
 PASS: 22 unique themes and page layouts; complete feature coverage in every server-rendered page; Ganesh-first covers and heroes; five local event images on each theme (110 placements); 22 unique event entrance keyframes; scratch-date keyboard fallback; all five events and event calendars; countdown rollover and elapsed-date handling; original WAV file; mocked Sheets validation, idempotency and formula escaping.
 Production build: run npm run build.
-Visual/interaction browser QA: blocked because Computer Use could not confidently identify the Windows browser URL.
+Visual/interaction browser QA: pending; local preview navigation timed out.
 Google Sheets: intentionally unconfigured placeholder; no live submission tested.
-PASS: 20 illustrated narrative openings, 20 optimized thumbnails, five new illustrated event images, exact image-source coverage, and 198 responsive CSS checks. Browser visual QA pending: local preview connections timed out.

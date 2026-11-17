@@ -22,11 +22,15 @@ const required=['blessing','couple','story','countdown','celebrate','gallery','v
 for(const design of designs){
  const html=renderToStaticMarkup(React.createElement(WeddingSite,{design}));
  assert.ok(!html.includes('wedding-nav')&&!html.includes('demo-bar'),design.name+': no navbar');
- assert.ok(html.includes('immersive-scene')&&html.includes('opening-scene'),design.name+': layered background and illustrated opening');
+ assert.ok(html.includes(design.storybook?'fixed-invitation-scene':'immersive-scene')&&html.includes('opening-scene'),design.name+': layered background and illustrated opening');
  for(const id of ['welcome',...required]) assert.equal((html.match(new RegExp(`id="${id}"`,'g'))||[]).length,1,`${design.name}: ${id}`);
  assert.deepEqual([...presentation(design).sections].sort(),[...required].sort());
  assert.ok(html.includes(design.image));
- if(design.storybook)assert.ok(html.includes('narrative-stage'));
+ if(design.storybook){
+  assert.ok(html.includes('narrative-stage'));
+  assert.equal((html.match(/class="fixed-invitation-scene /g)||[]).length,1,design.name+': one continuous scene');
+  assert.ok(!html.includes('class="immersive-scene'),design.name+': no duplicate parallax scene');
+ }
  for(const path of [design.image,design.thumbnail])assert.equal(readFileSync('public'+path).toString('ascii',8,12),'WEBP');
  for(const event of eventTemplates)assert.ok(html.includes(`event-${event.id}`));
  assert.equal((html.match(/Add to Calendar/g)||[]).length,5);
@@ -77,5 +81,4 @@ assert.equal(readFileSync('public/artwork/ganesh-blessing.webp').toString('ascii
 console.log('PASS Ganesh-first openings, 110 event-image placements, 22 event entrance sequences, scratch-date fallback.');
 console.log('PASS scroll-linked unfurl: endpoints, continuous intermediate positions, down/up reversibility.');
 console.log('PASS countdown rollover, calendar timezone, audio file, and Sheets validation/deduplication/formula escaping.');
-writeFileSync('verification.txt','PASS: 22 unique themes and page layouts; complete feature coverage in every server-rendered page; Ganesh-first covers and heroes; five local event images on each theme (110 placements); 22 unique event entrance keyframes; scratch-date keyboard fallback; all five events and event calendars; countdown rollover and elapsed-date handling; original WAV file; mocked Sheets validation, idempotency and formula escaping.\nProduction build: run npm run build.\nVisual/interaction browser QA: blocked because Computer Use could not confidently identify the Windows browser URL.\nGoogle Sheets: intentionally unconfigured placeholder; no live submission tested.\n');
-
+writeFileSync('verification.txt','PASS: 22 unique themes and page layouts; complete feature coverage in every server-rendered page; Ganesh-first covers and heroes; five local event images on each theme (110 placements); 22 unique event entrance keyframes; scratch-date keyboard fallback; all five events and event calendars; countdown rollover and elapsed-date handling; original WAV file; mocked Sheets validation, idempotency and formula escaping.\nProduction build: run npm run build.\nVisual/interaction browser QA: pending; local preview navigation timed out.\nGoogle Sheets: intentionally unconfigured placeholder; no live submission tested.\n');

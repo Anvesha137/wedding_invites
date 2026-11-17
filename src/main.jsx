@@ -136,7 +136,8 @@ Please share the details and next steps. Thank you!`
   </div>
 }
 
-const theme = designs.find(d => d.slug === new URLSearchParams(location.search).get('theme'))
+const requestedTheme = new URLSearchParams(location.search).get('theme')
+const theme = designs.find(d => d.slug === requestedTheme || d.legacySlug === requestedTheme)
 createRoot(document.getElementById('root')).render(<React.StrictMode>{theme ? <WeddingSite design={theme} /> : <App />}</React.StrictMode>)
 
 
@@ -145,3 +146,5 @@ import './responsive.css'
 import './photographic.css'
 
 import './storybook.css'
+
+import './fixed-scene.css'

@@ -53,3 +53,10 @@ Visual direction was researched from public Missing Piece demos: Mountain, Ayodh
 Final optimized assets are in public/artwork/illustrated. PROMPTS.json records the complete prompts and built-in imagegen provenance. Each scene has a smaller lazy-loaded collection preview. User content and the WhatsApp contact +91 761 947 9099 are preserved.
 
 Verification: production build; 22 server-rendered invitations; exact event image references; all scene/thumbnail WebP assets; 198 shipped-CSS grid checks at mobile/tablet sizes. Local browser navigation timed out on localhost and the LAN address; device visual/animation QA remains pending.
+
+## Fixed scenery update
+The first 20 invitations now keep their scenery and decorative layers fixed to the viewport. Names, blessings, event vignettes and guest information scroll normally over that single scene. Four new painted backgrounds and a transparent gold botanical frame are local optimized WebP assets in public/artwork/fixed, with prompts recorded alongside them.
+
+The first 14 catalogue entries use these public reference names: Mountain, Ayodhya, City, City 2, City 3, Meenaya, Laavan, Meenaya 2, Raabta 2, Whimsical, Raabta, Beach, Thalassa, and Save the date (City 2). They use original code/artwork; they are not pixel-identical copies or purchased vendor templates. Old theme URLs continue to resolve through legacySlug. The two video-inspired designs remain available.
+
+Build and server rendering checks cover the complete feature set. Responsive checks verify the compiled grid cascade, not device appearance. Browser visual and animation verification remains pending after local preview navigation timed out.

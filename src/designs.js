@@ -11,3 +11,22 @@ for(const d of designs){d.image=Number(d.id)<=20?`/artwork/illustrated/${d.art}.
 for(const d of designs){d.storybook=Number(d.id)<=20;d.ornament=['stars','petals','lanterns'][Number(d.id)%3];d.composition=['arch','medallion','folio','scallop','theatre'][Number(d.id)%5];}
 
 const sceneInks={warli:'#643b24',phulkari:'#742649',alpana:'#7b2826',jaipur:'#fff1d2',temple:'#34463a',kashmir:'#f7e4b3'};for(const d of designs)d.sceneInk=sceneInks[d.art]||d.ink;
+
+// Public catalogue names, implemented with our own artwork and source.
+const referenceCollection=[
+ ['Mountain','/artwork/fixed/blue-canvas.webp','#073e51','#d5bd75','stars','mountain','Mussoorie'],
+ ['Ayodhya','/artwork/fixed/temple-valley.webp','#726278','#fff1ca','stars','temple','Ayodhya'],
+ ['City','/artwork/fixed/blue-canvas.webp','#326b83','#fff4cc','lanterns','lantern','Jaipur'],
+ ['City 2','/artwork/themes/jaipur.webp','#a77c56','#fff1c9','none','palace','Jaipur'],
+ ['City 3','/artwork/fixed/rose-sky.webp','#c982a7','#fff3cc','petals','rose','Jaipur'],
+ ['Meenaya','/artwork/fixed/blue-canvas.webp','#326b83','#fff1d3','lanterns','lantern','Chennai'],
+ ['Laavan','/artwork/fixed/saffron-sky.webp','#d58d85','#fff4dd','lanterns','sunset','Amritsar'],
+ ['Meenaya 2','/artwork/fixed/rose-sky.webp','#c982a7','#fff3cc','petals','rose','Chennai'],
+ ['Raabta 2','/artwork/fixed/rose-sky.webp','#c982a7','#fff3cc','petals','rose','Hyderabad'],
+ ['Whimsical','/artwork/illustrated/watercolour.webp','#f6e7e7','#674756','petals','framed','Pune'],
+ ['Raabta','/artwork/illustrated/mughal.webp','#dfe6ce','#344e40','stars','framed','Agra'],
+ ['Beach','/artwork/illustrated/postcard.webp','#f3cfad','#634c40','none','framed','Goa'],
+ ['Thalassa','/artwork/illustrated/toile.webp','#e9ebdd','#32557a','none','framed','Pondicherry'],
+ ['Save the date (City 2)','/artwork/themes/jaipur.webp','#a77c56','#fff1c9','none','palace','Jaipur']
+];
+referenceCollection.forEach((r,i)=>{const d=designs[i];d.legacySlug=d.slug;d.name=r[0];d.slug=r[0].toLowerCase().replace(/[()]/g,'').replaceAll(' ','-');d.image=r[1];d.thumbnail=r[1].replace('.webp','-preview.webp');d.bg=r[2];d.ink=r[3];d.sceneInk=r[3];d.accent=r[3];d.ornament=r[4];d.sceneStyle=r[5];d.city=r[6];d.reference=true;d.mood='A continuous '+r[5]+' scene with layered invitation details';d.line='Together with our families, we invite you to celebrate.';if(i===0)d.overlay='/artwork/fixed/mountain-frame.webp';});
